@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<head>
+   <link rel="stylesheet" href="\css\server.css" type="text/css">
+   <title>Server POS</title> 
+</head>
+<body>
+   <script>
+      
+      let ord = { base: "", protein: "", dressing: "", extra: "", price: 7.69};
+
+      function grainBowl() { 
+         ord.base = "Grain Bowl"; 
+         document.getElementById("base1").value = "Grain Bowl";
+      } 
+
+      function salad() { 
+         ord.base = "Salad";
+         document.getElementById("base1").value = "Salad";
+      } 
+
+      function pita() { 
+         ord.base = "Pita";
+         document.getElementById("base1").value = "Pita";
+      } 
+
+      function greens() { 
+         ord.base = "Greens & Grains";
+         document.getElementById("base1").value = "Greens & Grains";
+      } 
+
+      function gyro() { 
+         ord.protein = "Gyro"; 
+         document.getElementById("protein1").value = "Gyro";
+      } 
+
+      function falafel() { 
+         ord.protein = "Falafel"; 
+         document.getElementById("protein1").value = "Falafel";
+      } 
+
+      function meatballs() { 
+         ord.protein = "Meatballs"; 
+         document.getElementById("protein1").value = "Meatballs";
+      } 
+
+      function chicken() { 
+         ord.protein = "Chicken";
+         document.getElementById("protein1").value = "Chicken";
+      } 
+
+      function vegmed() { 
+         ord.protein = "Veg Medley"; 
+         document.getElementById("protein1").value = "Veg Medley";
+      } 
+
+      function hummus() {  
+         ord.dressing = "Hummus"; 
+         document.getElementById("dressing1").value = "Hummus";
+      } 
+
+      function rphummus() {  
+         ord.dressing = "Red Pepper Hummus"; 
+         document.getElementById("dressing1").value = "Red Pepper Hummus";
+      } 
+
+      function jalafeta() {  
+         ord.dressing = "Jalapeno Feta"; 
+         document.getElementById("dressing1").value = "Jalapeno Feta";
+      } 
+
+      function tza() {  
+         ord.dressing = "Tzatziki"; 
+         document.getElementById("dressing1").value = "Tzatziki";
+      } 
+
+      function grev() {  
+         ord.dressing = "Green Vinaigrette"; 
+         document.getElementById("dressing1").value = "Green Vinaigrette";
+      } 
+
+      function harissayo() {  
+         ord.dressing = "Harissa Yogurt"; 
+         document.getElementById("dressing1").value = "Harissa Yogurt";
+      } 
+
+      function lemon() {  
+         ord.dressing = "Lemon Herb Tahini"; 
+         document.getElementById("dressing1").value = "Lemon Herb Tahini";
+      } 
+
+      function yodill() {  
+         ord.dressing = "Yogurt Dill"; 
+         document.getElementById("dressing1").value = "Yogurt Dill";
+      } 
+
+      function gfries() { 
+         ord.extra = "Garlic Fries"; 
+         document.getElementById("extra1").value = "GarlicFries";
+      } 
+
+      function twoF() { 
+         ord.extra = "2 Falafels"; 
+         document.getElementById("extra1").value = "2 Falafels";
+         
+      } 
+
+      function pitaE() { 
+         ord.extra = "Pita"; 
+         document.getElementById("extra1").value = "Pita";
+      } 
+
+      function fd() { 
+         ord.extra = "Fountain Drink"; 
+         document.getElementById("extra1").value = "FountainDrink";
+      } 
+
+      function vb() { 
+         ord.extra = "Vegan Box"; 
+         document.getElementById("extra1").value = "Vegan Box";
+      } 
+
+      function mana() { 
+         window.location.href = 'http://localhost:3000/manager';
+      } 
+
+      // Andrew stuff below ----------------------------------------------
+
+      function loadTheme(theme) {
+         var prev_theme = document.getElementsByTagName('link')[0];
+         prev_theme.setAttribute('href',theme);
+      }
+
+      function switchDefault() {
+         loadTheme("default.css");
+      }
+
+      function switchDyslexic() {
+         loadTheme("dyslexic.css");
+      }
+
+      function switchGrayscale() {
+         loadTheme("grayscale.css");
+      }
+
+      function switchContrast() {
+         loadTheme("contrast.css");
+      }
+
+      function send() {
+         switch(ord.extra) {
+            case "Garlic Fries":
+                  alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 1.99));
+               break;
+            case "2 Falafels":
+                  alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 2.85));
+               break;
+            case "Pita":
+                  alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 3.50));
+               break;
+            case "Fountain Drink":
+                  alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 1.30));
+               break;
+            case "Vegan Box":
+                  alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 6.49));
+               break;
+            }
+      }
+   
+   </script>
+
+   <h1>Server POS</h1>
+   <header>
+      <a href='/'>Login</a>
+      <a href='/customer'>Customer View</a>
+      <a href='/server'>Server POS</a>
+      <a href='/manager'>Manager View</a>
+   </header>
+
+
+      <div class = "button-container">
+         <div class = "entree">
+            <h2> Entree </h2>
+            <button id="s" onclick="grainBowl()">Grain Bowl</button>
+            <button id="s" onclick="salad()">Salad</button>
+            <button id="s" onclick="pita()">Pita</button>
+            <button id="s" onclick="greens()">Greens & Grains</button> 
+         </div>
+
+         <div class = "protein">
+            <h2> Protein </h2> 
+            <button id="s" onclick="gyro()">Gyro</button>
+            <button id="s" onclick="falafel()">Falafel</button>
+            <button id="s" onclick="meatballs()">Meatballs</button>
+            <button id="s" onclick="chicken()">Chicken</button>
+            <button id="s" onclick="vegmed()">Veg Medley</button>
+         </div>
+
+         <div class = "dressing">
+            <h2> Dressing </h2>
+            <button id="s" onclick="hummus()">Hummus</button>
+            <button id="s" onclick="rphummus()">Red Pepper Hummus</button>
+            <button id="s" onclick="jalafeta()">Jalapeno Feta</button>
+            <button id="s" onclick="tza()">Tzatziki</button>
+            <button id="s" onclick="grev()">Green Vinaigrette</button>
+            <button id="s" onclick="harissayo()">Harissa Yogurt</button>
+            <button id="s" onclick="lemon()">Lemon Herb Tahini</button>
+            <button id="s" onclick="yodill()">Yogurt Dill</button> 
+         </div>
+
+         <div class = "extra">
+            <h2> Extra </h2> 
+            <button id="s" onclick="gfries()">Garlic Fries</button>
+            <button id="s" onclick="twoF()">2 Falafels</button>
+            <button id="s" onclick="pitaE()">Pita</button>
+            <button id="s" onclick="fd()">Fountain Drink</button>
+            <button id="s" onclick="vb()">Vegan Box</button>
+         </div>
+    </div>
+
+    <form action="/" method="post">
+      <input type="text" id="base1" name="bas" placeholder="Base">
+      <input type="text" id="protein1" name="pro" placeholder="Protein">
+      <input type="text" id="dressing1" name="dre" placeholder="Dressing">
+      <input type="text" id="extra1" name="ext" placeholder="Extra">
+      <input type="submit" value="Order">
+   </form>
+
+    <div class = "bottom">
+        <button id="order" onclick="send()">Place Order</button>
+    </div>
+  
+</body>

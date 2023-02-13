@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="\css\manager.css">
+        <title>Manager POS</title> 
+    </head>
+    <body>
+        <script>
+            /*function revenue() {
+                let text;
+                let date1 = prompt("Please enter start date:");
+                let date2 = prompt("Please enter end date:");
+                text = "The start date is " + date1 + " and the end date is " + date2 + ".";
+                document.getElementById("revenue").innerHTML = text; 
+            }
+            function revenue() {
+                document.getElementById('rev').style.display = 'block';
+            }
+            function sales() { 
+                document.getElementById('sale').style.display = 'block';
+            }
+            function excess() { 
+                document.getElementById("exc").style.display = 'block';
+            }
+            function restockrep() { 
+                document.getElementById("resrep").style.display = 'block';
+            }
+            function wst() { 
+                document.getElementById("w").style.display = 'block';
+            }
+            function inventory() { 
+            }
+            function restock() { 
+                document.getElementById("stock").style.display = 'block';
+                var item_name = document.getElementById("itemname").value;
+                var item_inventory = document.getElementById("inven").value;
+                var result = item_name + ' ' + item_inventory;
+                document.getElementById("spanResult").testContent = result;
+            }
+            function pricing() { 
+            }
+            function additem() { 
+            }*/
+            function customer() { 
+                window.location.href = 'http://localhost:3000';
+            }
+            function server() { 
+                window.location.href = 'http://localhost:3000/server';
+            }
+        </script>
+        <h1>Manager POS</h1>
+        <header>
+            <a href='/'>Login</a>
+            <a href='/customer'>Customer View</a>
+            <a href='/server'>Server POS</a>
+            <a href='/manager'>Manager View</a>
+        </header>
+            <!-- <div class = "button-container"> -->
+                <!-- <div class = "reports">  -->
+                    <h2> Reports </h2> 
+                    <div class = "menu-edit">
+                    <!--<button onclick="revenue()">Revenue Report</button>
+                    <button onclick="sales()">Sales Report</button>
+                    <button onclick="excess()">Excess Report</button>
+                    <button onclick="restockrep()">Restock Report</button>
+                    <button onclick="wst()">What Sales Together</button>-->
+                   
+                    <form action="/rev" method="post">
+                        
+                        <input type="text" id="sdate" name="date1" placeholder="Start Date">
+                        <input type="text" id="edate" name="date2" placeholder="End Date">
+                        <button type="submit" value="Revenue Report">Revenue Report</button>
+                    </form>
+    
+    
+                    <form action="/s" method="post">
+                        <input type="text" id="sdate" name="date1" placeholder="Start Date">
+                        <input type="text" id="edate" name="date2" placeholder="End Date" >
+                        <button type="submit" value="Sales Report Report">Sales Report</button>
+                    </form>
+    
+                    <form action="/e" method="post">
+                        <input type="text" id="sdate" name="date1" placeholder="N/A" disabled>
+                        <input type="text" id="edate" name="date2" placeholder="N/A" disabled>
+                        <button type="submit" value="Excess Report">Excess Report</button>
+                    </form>
+    
+                    <form action="/rst" method="post">
+                        <input type="text" id="sdate" name="date1" placeholder="N/A" disabled>
+                        <input type="text" id="edate" name="date2" placeholder="N/A" disabled>
+                        <button type="submit" value="Restock Report">Restock Report</button>
+                    </form>
+    
+                    <form action="/w" method="post">
+                        <input type="text" id="sdate" name="date1" placeholder="Start Date">
+                        <input type="text" id="edate" name="date2" placeholder="End Date">
+                        <button type="submit" value="What Sells Together Report">What Sells Together Report</button>
+                    </form>
+                      
+        </div>
+
+            <div class = "menu-edit">
+                <h2> Edit Menu </h2> 
+
+                <form action="/i" method="post">
+                    <input type="text" id="item" name="itemName" placeholder="Item Name">
+                    <input type="text" id="inven" name="inventory" placeholder="New Inventory">
+                    <button type="submit" value="Inventory Update">Inventory Update</button>
+                </form>
+
+                <form action="/p" method="post">
+                    <input type="text" id="item" name="itemName" placeholder="Item Name">
+                    <input type="text" id="pric" name="cost" placeholder="New Price">
+                    <button type="submit" value="Pricing Update">Pricing Update</button>
+                </form>
+            </div>
+
+            
+        
+    </body>
+</html>

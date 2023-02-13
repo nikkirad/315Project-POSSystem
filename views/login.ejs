@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="\css\login.css" type="text/css">
+    </head>
+    <body>
+        <script>
+      
+            let ord = { base: "", protein: "", dressing: "", extra: "", price: 7.69};
+      
+            function grainBowl() { 
+               ord.base = "Grain Bowl"; 
+               document.getElementById("base1").value = "Grain Bowl";
+            } 
+      
+            function salad() { 
+               ord.base = "Salad";
+               document.getElementById("base1").value = "Salad";
+            } 
+      
+            function pita() { 
+               ord.base = "Pita";
+               document.getElementById("base1").value = "Pita";
+            } 
+      
+            function greens() { 
+               ord.base = "Greens & Grains";
+               document.getElementById("base1").value = "Greens & Grains";
+            } 
+      
+            function gyro() { 
+               ord.protein = "Gyro"; 
+               document.getElementById("protein1").value = "Gyro";
+            } 
+      
+            function falafel() { 
+               ord.protein = "Falafel"; 
+               document.getElementById("protein1").value = "Falafel";
+            } 
+      
+            function meatballs() { 
+               ord.protein = "Meatballs"; 
+               document.getElementById("protein1").value = "Meatballs";
+            } 
+      
+            function chicken() { 
+               ord.protein = "Chicken";
+               document.getElementById("protein1").value = "Chicken";
+            } 
+      
+            function vegmed() { 
+               ord.protein = "Veg Medley"; 
+               document.getElementById("protein1").value = "Veg Medley";
+            } 
+      
+            function hummus() {  
+               ord.dressing = "Hummus"; 
+               document.getElementById("dressing1").value = "Hummus";
+            } 
+      
+            function rphummus() {  
+               ord.dressing = "Red Pepper Hummus"; 
+               document.getElementById("dressing1").value = "Red Pepper Hummus";
+            } 
+      
+            function jalafeta() {  
+               ord.dressing = "Jalapeno Feta"; 
+               document.getElementById("dressing1").value = "Jalapeno Feta";
+            } 
+      
+            function tza() {  
+               ord.dressing = "Tzatziki"; 
+               document.getElementById("dressing1").value = "Tzatziki";
+            } 
+      
+            function grev() {  
+               ord.dressing = "Green Vinaigrette"; 
+               document.getElementById("dressing1").value = "Green Vinaigrette";
+            } 
+      
+            function harissayo() {  
+               ord.dressing = "Harissa Yogurt"; 
+               document.getElementById("dressing1").value = "Harissa Yogurt";
+            } 
+      
+            function lemon() {  
+               ord.dressing = "Lemon Herb Tahini"; 
+               document.getElementById("dressing1").value = "Lemon Herb Tahini";
+            } 
+      
+            function yodill() {  
+               ord.dressing = "Yogurt Dill"; 
+               document.getElementById("dressing1").value = "Yogurt Dill";
+            } 
+      
+            function gfries() { 
+               ord.extra = "Garlic Fries"; 
+               document.getElementById("extra1").value = "GarlicFries";
+            } 
+      
+            function twoF() { 
+               ord.extra = "2 Falafels"; 
+               document.getElementById("extra1").value = "2 Falafels";
+               
+            } 
+      
+            function pitaE() { 
+               ord.extra = "Pita"; 
+               document.getElementById("extra1").value = "Pita";
+            } 
+      
+            function fd() { 
+               ord.extra = "Fountain Drink"; 
+               document.getElementById("extra1").value = "FountainDrink";
+            } 
+      
+            function vb() { 
+               ord.extra = "Vegan Box"; 
+               document.getElementById("extra1").value = "Vegan Box";
+            } 
+      
+            function mana() { 
+               window.location.href = 'http://localhost:3000/manager';
+            } 
+      
+            // Andrew stuff below ----------------------------------------------
+      
+            function loadTheme(theme) {
+               var prev_theme = document.getElementsByTagName('link')[0];
+               prev_theme.setAttribute('href',theme);
+            }
+      
+            function switchDefault() {
+               loadTheme("default.css");
+            }
+      
+            function switchDyslexic() {
+               loadTheme("dyslexic.css");
+            }
+      
+            function switchGrayscale() {
+               loadTheme("grayscale.css");
+            }
+      
+            function switchContrast() {
+               loadTheme("contrast.css");
+            }
+      
+            function send() {
+               switch(ord.extra) {
+                  case "Garlic Fries":
+                        alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 1.99));
+                     break;
+                  case "2 Falafels":
+                        alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 2.85));
+                     break;
+                  case "Pita":
+                        alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 3.50));
+                     break;
+                  case "Fountain Drink":
+                        alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 1.30));
+                     break;
+                  case "Vegan Box":
+                        alert("-----Receipt: -----\n" + ord.base + "\n" + ord.protein + "\n" + ord.dressing + "\n" + ord.extra + "\n" + (ord.price + 6.49));
+                     break;
+                  }
+            }
+         
+        </script>
+
+      
+        <main id = "main-holder">
+            <h1 id = "login-header">Login Page</h1>
+
+            <form id="login-form">
+                <input type="button" value="Login" id="login-form-submit" onclick="location.href='https://accounts.google.com/o/oauth2/auth?client_id=544132409296-ubqjp9cbqpc7bamktbi82pidngdk5567.apps.googleusercontent.com&response_type=token&redirect_uri=https://pomandhoneypos.onrender.com/server&scope=https://www.googleapis.com/auth/userinfo.profile';">
+                <input type="button" value="Guest" id="guest-form-submit" onclick="location.href='/customer';">
+            </form>
+        </main>
+    </body>
+</html>

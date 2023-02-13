@@ -1,0 +1,108 @@
+header {
+    overflow: hidden;
+    text-align: center;
+}
+header a{
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display:inline-block;
+}
+header a:hover {
+    background-color: #04AA6D;
+    color: black;
+}
+header a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+html {
+    height: 100%;
+}
+
+
+body {
+    background-color: rgb(46,56,116);
+    background-image: url("https://api.dineoncampus.com/files/images/7938247e-ad90-4374-b07b-da3d7957d959.png");
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: top left;
+
+    height: 100%;
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#main-holder {
+    width: 50%;
+    height: 70%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+#login-form {
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+  
+
+.login-form-field {
+    height: 50%;
+    width: 100%;
+
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    outline: none;
+    padding: 5px 0px 5px 5px;
+
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: "Georgia";
+}
+  
+#login-form-submit, #guest-form-submit {
+    width: 100%;
+
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    background-color: rgb(93,139,70);
+    cursor: pointer;
+    outline: none;
+
+    margin-top: 10px;
+    font-size: 24px;
+    font-family: "Georgia";
+    font-weight: normal;
+}
+
+/* Heading */
+h1, h2 {
+    font-family: "Georgia";
+    font-weight: normal;
+    font-size: 36px;
+    color: rgb(255,255,255);
+}
+
+
+
+/* Disables the line underneath links */
+button:link {
+    text-decoration: none;
+}
+
+/* Disables blue border around selected text */
+h1::selection, h2::selection, button::selection {
+    text-decoration: none;
+}

@@ -1,0 +1,200 @@
+body {
+    background-color: rgb(46,56,116);
+}
+
+h1, h2, a {
+    font-family: "Georgia";
+    color: rgb(0,0,0);
+    font-weight: normal;
+}
+
+/* Heading */
+h1 {
+    font-size: 36px;
+    text-align: left;
+}
+
+/* Section Heading */
+h2 {
+    font-size: 27px;
+    text-align: center;
+}
+
+/* Text within buttons*/
+a {
+    font-size: 20px;
+    text-align: center;
+}
+
+title{
+    color: rgb(255,255,255);
+}
+
+
+
+/* Container for all buttons */
+.button-container {
+    width: 1520px;
+    overflow-y: auto;
+    display: inline-block;
+}
+
+/* Container for each section */
+.entree, .protein, .extra, .dressing {
+    width: 300px;
+    overflow-y: auto;
+    float: left;
+    
+  /*margin: top rght btm left*/
+    margin: 0px 20px 0px 20px;
+}
+.dressing {
+    width: 450px;
+}
+.order {
+    width: 1480px;
+    height: 150px;
+    display: inline-flex;
+    justify-content: right;
+  /*margin: top rght btm left*/
+    margin: 40px 35px 0px 0px;
+}
+
+.entree {
+    background-color: rgb(93,139,70);
+}
+
+.protein {
+    background-color: rgb(127,149,209);
+}
+
+.dressing {
+    background-color: rgb(209,96,20);
+}
+
+.extra {
+    background-color: rgb(239,115,115);
+}
+
+
+/* Settings for all buttons */
+.entree > a, .protein > a, .dressing > a, .extra > a {
+    width: 130px;
+    height: 50px;
+    float: left;
+    margin: 10px;
+    padding: 20px 0;/*makes text within button more center*/
+}
+.entree > a {
+    background-color: rgb(250,240,230);
+}
+.protein > a {
+    background-color: rgb(250,240,230);
+}
+.dressing > a {
+    background-color: rgb(250,240,230);
+}
+.extra > a {
+    background-color: rgb(250,240,230);
+}
+.order > a {
+    width: 360px;
+    height: 100px;
+    background-color: rgb(207,153,95);
+    padding: 20px 0;
+}
+
+
+
+/*
+.section > a:hover changes state of the buttons (in that section) while hovering
+.section > a:active changes state of the buttons (in that section) while being clicked
+
+In the case here, I'm using them to change the color of the buttons 
+    to give some slight feedback
+*/
+
+.entree > a:hover {
+    background-color: rgb(103,153,78);
+}
+.entree > a:active {
+    background-color: rgb(93,139,70);
+}
+
+.protein > a:hover {
+    background-color: rgb(135,159,221);
+}
+.protein > a:active {
+    background-color: rgb(127,149,209);
+}
+
+.dressing > a:hover {
+    background-color: rgb(221,102,22);
+}
+.dressing > a:active {
+    background-color: rgb(209,96,20);
+}
+
+.extra > a:hover {
+    background-color: rgb(255,122,122);
+}
+.extra > a:active {
+    background-color: rgb(239,115,115);
+}
+
+.order > a:hover {
+    background-color: rgb(221,163,102);
+}
+.order > a:active {
+    background-color: rgb(207,153,95);
+}
+
+ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color: rgb(25,90,75);
+    border-right: 0.5em solid rgb(46,56,116);
+    border-left: 0.5em solid rgb(46,56,116);
+    
+  }
+  
+  li {
+    flex: 1 0 auto;
+  }
+  
+  ul a {
+    display: block;
+    padding: 0.25em 1em;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid rgb(46,56,116);
+    font-family: Georgia;
+  }
+  
+  a:hover {
+    background: rgb(200, 70, 25);
+  }
+
+  .pic1 img{
+    width: 125px;
+    height: 125px;
+    border: 3px solid rgb(46,56,116);
+  }
+
+
+
+
+/* Disables the line underneath links */
+a:link {
+    text-decoration: none;
+}
+
+/* Disables blue border around selected text */
+h1::selection, h2::selection, a::selection {
+    text-decoration: none;
+}
+
+
